@@ -1,0 +1,29 @@
+{
+    "pages": [
+        "pages/index/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#42BD55",
+        "navigationBarTitleText": "首页",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "backgroundColor": "#FFFFFF",
+        "borderStyle": "black",
+        "selectedColor": "#42BD55",
+        "position": "bottom",
+        "list": [{
+                "text": "首页"
+            },
+            {
+                "text": "榜单"
+            },
+            {
+                "text": "我的"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
