@@ -3,46 +3,23 @@
   <view class="search-bg">
     <view class="search">搜索</view>
   </view>
-  <view class="hot-show">
+  <block wx:for="{{doubanList}}">
     <view class="hot-show-title">
-      <text>影院热映</text>
+      <text>{{hotShowTxt}}</text>
       <text bindtap = "seeMore">查看更多</text>
     </view>
-    <view class="hot-show-item">
-      <view class="item-mian">
-        <image src="../images/movie.jpg"></image>
-        <text>寻梦环游记</text>
-        <view class="rating">
-          <text class="estate"></text>
-          <text class="">5.7</text>
+    <view class="hot-show">
+      <block wx:for="{{movieMian}}">
+        <view class="hot-show-item">
+          <view class="item-mian">
+            <image src="{{item.movieImg}}"></image>
+            <text>{{item.movieTitle}}</text>
+            <text>评分：{{item.score}}</text>
+          </view>
         </view>
-      </view>
-      <view class="item-mian">
-        <image src="../images/movie.jpg"></image>
-        <text>寻梦环游记</text>
-        <view class="rating">
-          <text class="estate"></text>
-          <text class="">5.7</text>
-        </view>
-      </view>
-      
-      <view class="item-mian">
-        <image src="../images/movie.jpg"></image>
-        <text>寻梦环游记</text>
-        <view class="rating">
-          <text class="estate"></text>
-          <text class="">5.7</text>
-        </view>
-      </view>
-      <view class="item-mian">
-        <image src="../images/movie.jpg"></image>
-        <text>寻梦环游记</text>
-        <view class="rating">
-          <text class="estate"></text>
-          <text class="">5.7</text>
-        </view>
-      </view>
+      </block>
     </view>
-  </view>
+  </block>
+  
 </view>
   

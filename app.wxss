@@ -1,10 +1,9 @@
 /**app.wxss**/
 
-.hot-show-item {
+.hot-show {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     padding-right: 18rpx;
 }
 
@@ -18,11 +17,4 @@
     display: flex;
     flex-direction: column;
     margin-left: 18rpx;
-}
-
-.estate {
-    width: 120rpx;
-    height: 30rpx;
-    background: url(../images/rating.png)0rpx -100rpx;
-    background-size: 100%;
 }
