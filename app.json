@@ -1,6 +1,7 @@
 {
     "pages": [
-        "pages/index/index"
+        "pages/index/index",
+        "pages/see_more/see_more"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -9,20 +10,16 @@
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
-        "backgroundColor": "#FFFFFF",
-        "borderStyle": "black",
-        "selectedColor": "#42BD55",
-        "position": "bottom",
         "list": [{
-                "text": "首页"
-            },
-            {
-                "text": "榜单"
-            },
-            {
-                "text": "我的"
-            }
-        ]
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/index/index",
+            "text": "榜单"
+        }, {
+            "pagePath": "pages/index/index",
+            "text": "我的"
+        }]
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"

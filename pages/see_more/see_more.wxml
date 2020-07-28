@@ -1,0 +1,110 @@
+<!--pages/see_more/see_more.wxml-->
+<view class="hot-show-continer">
+    <view class="hot-show-row">
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+    </view>
+    
+    <view class="hot-show-row">
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="hot-show-row">
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="hot-show-row">
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+        <view class="item-mian">
+            <image src="../images/movie.jpg"></image>
+            <text>寻梦环游记</text>
+            <view class="rating">
+                <text class="estate"></text>
+                <text class="">5.7</text>
+            </view>
+        </view>
+    </view>
+</view>

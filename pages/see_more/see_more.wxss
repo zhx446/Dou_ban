@@ -1,0 +1,8 @@
+/* pages/see_more/see_more.wxss */
+
+.hot-show-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30rpx;
+}
