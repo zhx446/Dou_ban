@@ -1,1 +1,94 @@
 /* pages/movie_details/movie_details.wxss */
+page {
+   background-color: #F5F4F9;
+}
+
+.movie-details {
+   display: flex;
+   flex-direction: column;
+}
+
+.movie-caption {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.movie-caption image {
+   width: 240rpx;
+   height: 300rpx;
+   border-radius: 10rpx;
+}
+
+.movie-right {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left: 30rpx;
+}
+
+.title {
+   font-weight: bold;
+   font-size: 50rpx;
+}
+
+.coco {
+   font-size: 35rpx;
+   color: #848484;
+   padding: 20rpx 0rpx;
+}
+
+.type {
+   font-size: 25rpx;
+   color: #848484;
+}
+
+.collect {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.collect view {
+   margin: 20rpx 0rpx;
+   background-color: #fff;
+   width: 220rpx;
+   height: 80rpx;
+   font-weight: 550;
+   text-align: center;
+   line-height: 80rpx;
+   border-radius: 10rpx;
+   box-shadow: 0rpx 5rpx 10rpx 0rpx #DDDCE1;
+}
+
+.collect view:last-child {
+   margin-left: 20rpx;
+}
+
+.movie-score {
+   width: 90%;
+   height: 250rpx;
+   padding: 20rpx 20rpx;
+   margin: 0 auto;
+   margin-top: 40rpx;
+   margin-bottom: 40rpx;
+   background-color: #fff;
+   border-radius: 10rpx;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.movie-intro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-left: 15rpx;
+   padding-right: 10rpx;
+}
+
+.movie-intro text:first-child {
+   padding-bottom: 20rpx;
+   font-weight: bold;
+}
+

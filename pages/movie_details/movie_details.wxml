@@ -1,2 +1,25 @@
 <!--pages/movie_details/movie_details.wxml-->
-<text>pages/movie_details/movie_details.wxml</text>
+<view class="movie-details">
+    <view class="movie-caption">
+        <image src="../images/movie.jpg"></image>
+        <view class="movie-right">
+            <text class="title">寻梦环游记(2017)</text>
+            <text class="coco">Coco(2017)</text>
+            <text class="type">喜剧 动画 奇幻/美国/片长105分钟</text>
+            <view class="collect">
+                <view>想看</view>
+                <view>看过</view>
+            </view>
+        </view>
+    </view>
+    <view class="movie-score">
+        <view class="score-title">
+            <text>豆瓣评分</text>
+        </view>
+        <text>></text>
+    </view>
+    <view class="movie-intro">
+        <text>简介</text>
+        <text>热爱音乐的米格尔（安东尼*冈萨雷兹Anthony Gonzalez配音）不幸地出生在一个视音乐为洪水猛兽的大家庭之中，一家人只盼着米格尔快快长大，好继承家里传承了数代的制鞋产业。一年一度的亡灵节...</text>
+    </view>
+</view>
