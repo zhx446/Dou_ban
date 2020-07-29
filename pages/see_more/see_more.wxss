@@ -3,6 +3,12 @@
 .hot-show-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 30rpx;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item-mian {
+    margin-bottom: 20rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
 }

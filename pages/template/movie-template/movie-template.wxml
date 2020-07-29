@@ -1,0 +1,9 @@
+<template name="movieTemplate">
+    <view class="hot-show-item" bindtap="toMoiveDetail" data-movie-id="{{movieId}}">
+				<view class="item-mian">
+					<image src="{{movieImg}}"></image>
+					<text>{{movieTitle}}</text>
+					<text>评分：{{score}}</text>
+				</view>
+			</view>
+</template>

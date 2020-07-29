@@ -1,25 +1,37 @@
 <!--index.wxml-->
+<import src="../template/movie-template/movie-template.wxml" />
 <view class="movie-container">
-  <view class="search-bg">
-    <view class="search">搜索</view>
-  </view>
-  <block wx:for="{{doubanList}}">
-    <view class="hot-show-title">
-      <text>{{hotShowTxt}}</text>
-      <text bindtap = "seeMore">查看更多</text>
-    </view>
-    <view class="hot-show">
-      <block wx:for="{{movieMian}}">
-        <view class="hot-show-item">
-          <view class="item-mian">
-            <image src="{{item.movieImg}}"></image>
-            <text>{{item.movieTitle}}</text>
-            <text>评分：{{item.score}}</text>
-          </view>
-        </view>
-      </block>
-    </view>
-  </block>
-  
+	<view class="search-bg">
+		<view class="search">搜索</view>
+	</view>
+
+	<view class="hot-show-title">
+		<text>影院热映</text>
+		<text bindtap = "seeMore" data-type="0">查看更多</text>
+	</view>
+	<view class="hot-show">
+		<block wx:for="{{movieMian}}">
+			<template is="movieTemplate" data="{{...item}}"></template>
+		</block>
+	</view>
+	<view class="hot-show-title">
+		<text>豆瓣热门</text>
+		<text bindtap = "seeMore" data-type="1">查看更多</text>
+	</view>
+	<view class="hot-show">
+		<block wx:for="{{hotMian}}">
+			<template is="movieTemplate" data="{{...item}}"></template>
+		</block>
+	</view>
+
+	<view class="hot-show-title">
+		<text>最新上映</text>
+		<text bindtap = "seeMore" data-type="2">查看更多</text>
+	</view>
+	<view class="hot-show">
+		<block wx:for="{{nowMian}}">
+			<template is="movieTemplate" data="{{...item}}"></template>
+		</block>
+	</view>
+
 </view>
-  

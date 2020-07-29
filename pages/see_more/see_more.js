@@ -5,21 +5,89 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hotShowList:[{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    },{
+      movieImg:'../images/movie.jpg',
+      movieTitle:'寻梦环游记',
+      score:'9.8'
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.type)
+  },
 
+  toMovieDetails:function(e) {
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

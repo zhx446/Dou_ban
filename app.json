@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/see_more/see_more"
+        "pages/see_more/see_more",
+        "pages/movie_details/movie_details"
     ],
     "window": {
         "backgroundTextStyle": "light",
