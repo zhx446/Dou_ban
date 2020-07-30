@@ -50,4 +50,5 @@ page {
 
 .item-mian text {
     text-align: center;
+    font-size: 25rpx;
 }

@@ -1,9 +1,10 @@
 <template name="movieTemplate">
-    <view class="hot-show-item" bindtap="toMoiveDetail" data-movie-id="{{movieId}}">
+    <view class="hot-show-item" bindtap="toMoiveDetail" data-movie-id="{{id}}">
 				<view class="item-mian">
-					<image src="{{movieImg}}"></image>
-					<text>{{movieTitle}}</text>
-					<text>评分：{{score}}</text>
+					<image src="{{images.small}}"></image>
+					<text>{{title}}</text>
+					<text wx:if="{{rating.average}} < 0">评分：{{rating.average}}</text>
+					<text wx:else>暂无评分</text>
 				</view>
 			</view>
 </template>
