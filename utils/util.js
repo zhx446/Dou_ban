@@ -14,26 +14,20 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-function movieRequest (dataUrl,movieSuccess) {
+function httpRequest(url,callBack,type) {
   var that = this;
   wx.request({
-    //仅为示例，并非真实的接口地址
-    url: dataUrl,
-    header: {
-      'content-type': 'json' // 默认值
-    },
-    success(res) {
-      that.movieSuccess(res)
-    }
-  })
-}
-
-function movieSuccess(res,movieList) {
-  this.setData({
-    movieList:res.data.subjects
+      url: url, 
+      header: {
+          'content-type': 'json' 
+      },
+      success(res) {
+          callBack(res.data,type)
+      }
   })
 }
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  httpRequest:httpRequest
 }
