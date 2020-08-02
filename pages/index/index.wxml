@@ -5,8 +5,8 @@
 		<view class="search">搜索</view>
 	</view>
 	<view class="hot-show-title">
-		<text>影院热映</text>
-		<text bindtap = "seeMore" data-type="0">查看更多</text>
+		<text>Top250</text>
+		<text bindtap = "seeMore" data-type="top250">查看更多</text>
 	</view>
 	<view class="hot-show">
 		<block wx:for="{{movieMian}}">
@@ -15,7 +15,7 @@
 	</view>
 	<view class="hot-show-title">
 		<text>豆瓣热门</text>
-		<text bindtap = "seeMore" data-type="1">查看更多</text>
+		<text bindtap = "seeMore" data-type="in_theaters">查看更多</text>
 	</view>
 	<view class="hot-show">
 		<block wx:for="{{hotMian}}">
@@ -24,7 +24,7 @@
 	</view>
 	<view class="hot-show-title">
 		<text>最新上映</text>
-		<text bindtap = "seeMore" data-type="2">查看更多</text>
+		<text bindtap = "seeMore" data-type="coming_soon">查看更多</text>
 	</view>
 	<view class="hot-show">
 		<block wx:for="{{nowMian}}">

@@ -11,4 +11,7 @@
     margin-bottom: 20rpx;
     margin-right: 20rpx;
     margin-left: 20rpx;
+    font-size: 25rpx;
+    text-align: center;
+    width: 25%;
 }

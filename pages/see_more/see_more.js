@@ -1,93 +1,37 @@
 // pages/see_more/see_more.js
+const util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hotShowList:[{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    },{
-      movieImg:'../images/movie.jpg',
-      movieTitle:'寻梦环游记',
-      score:'9.8'
-    }]
+    hotShowList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.type)
+    const typeId = options.type
+    this.seeMore('https://api.douban.com/v2/movie/'+typeId+'?start=1&count=15&apikey=0b2bdeda43b5688921839c8ecb20399b')
   },
 
-  toMovieDetails:function(e) {
-    
+  seeMore: function (url, type) {
+    util.httpRequest(url,this.seeMoreSuccess,type)
+  },
+
+  seeMoreSuccess: function (data) {
+    this.setData({
+      hotShowList: data.subjects
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**

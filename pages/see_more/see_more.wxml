@@ -2,9 +2,9 @@
 <view class="hot-show-row">
 	<block wx:for="{{hotShowList}}" bindtap="toMovieDetails" >
 		<view class="item-mian">
-			<image src="{{item.movieImg}}"></image>
-			<text>{{item.movieTitle}}</text>
-			<text>评分：{{item.score}}</text>
+			<image src="{{item.images.small}}"></image>
+			<text>{{item.title}}</text>
+			<text>评分：{{item.rating.average}}</text>
 		</view>
 	</block>
 </view>
