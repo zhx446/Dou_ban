@@ -9,7 +9,7 @@ Page({
     hotShowList: [],
     start: 0, //初始页默认值
     count: 10,
-    typeId:''
+    typeId: ''
   },
 
   /**
@@ -22,7 +22,7 @@ Page({
     this.seeMore('https://api.douban.com/v2/movie/' + typeId + '?start=0&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
     this.refreshData('https://api.douban.com/v2/movie/' + typeId + '?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
     this.setData({
-      typeId:typeId
+      typeId: typeId
     })
   },
 
@@ -73,12 +73,12 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var start = this.data.start + 11
+    var start = this.data.start + 10
     const typeId = this.data.typeId
     this.setData({
       start: start
     })
-    this.refreshData('https://api.douban.com/v2/movie/'+typeId+'?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
+    this.refreshData('https://api.douban.com/v2/movie/' + typeId + '?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
   },
 
   /**
