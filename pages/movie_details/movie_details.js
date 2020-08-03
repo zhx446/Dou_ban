@@ -11,7 +11,8 @@ Page({
                 artist: '',
                 type: '',
                 time: '',
-                movieSynopsis: ''
+                movieSynopsis: '',
+                paragraph:true
         },
 
         /**

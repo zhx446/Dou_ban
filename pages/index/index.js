@@ -20,6 +20,15 @@ Page({
     },
 
     movieSuccess:function(data,type) {
+        var movie = data.subjects
+        var len = movie.length
+        for(let i = 0;i < len;i++) {
+            if(movie[i].title.length > 6) {
+                movie[i].title = movie[i].title.substr(0,5)+'...'
+            }
+            movie[i].star = [2,2,2,2,2]
+        }     
+        
         this.setData({
             [type]:data.subjects
         })

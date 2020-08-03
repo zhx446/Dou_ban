@@ -4,5 +4,5 @@
     "navigationBarTitleText": "影院热映",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "onReachBottomDistance":300
+    "onReachBottomDistance":100
 }

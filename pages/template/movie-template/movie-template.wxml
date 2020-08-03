@@ -1,10 +1,17 @@
 <template name="movieTemplate">
-    <view class="hot-show-item" bindtap="toMoiveDetail" data-movie-id="{{id}}">
-				<view class="item-mian">
-					<image src="{{images.small}}"></image>
-					<text>{{title}}</text>
-					<text wx:if="{{rating.average}} < 0">评分：{{rating.average}}</text>
-					<text wx:else>暂无评分</text>
-				</view>
-			</view>
+	<view class="hot-show-item" bindtap="toMoiveDetail" data-movie-id="{{id}}">
+		<view class="item-mian">
+			<image src="{{images.small}}"></image>
+			<text>{{title}}</text>
+			<text wx:if="{{rating.average}} < 0">评分：{{rating.average}}</text>
+			<text wx:else>暂无评分</text>
+			<!-- <view class="rating-star">
+				<block wx:for="{{star}}">
+					<image wx:if="{{item == 2}}" src="../../images/star-full.png"></image>
+					<image wx:elif="{{item == 1}}" src="../../images/star-half.png"></image>
+					<image wx:else src="../../images/star-null.png"></image>
+				</block>
+			</view> -->
+		</view>
+	</view>
 </template>

@@ -7,8 +7,9 @@ Page({
    */
   data: {
     hotShowList: [],
-    start: 1, //初始页默认值
-    count: 10
+    start: 0, //初始页默认值
+    count: 10,
+    typeId:''
   },
 
   /**
@@ -17,10 +18,12 @@ Page({
   onLoad: function (options) {
     const typeId = options.type
     var start = this.data.start
-    var count = this.data.count
     this.moreTitle(typeId)
-    this.seeMore('https://api.douban.com/v2/movie/' + typeId + '?start=1&count=15&apikey=0b2bdeda43b5688921839c8ecb20399b')
-    this.refreshData('https://api.douban.com/v2/movie/top250?start=' + start + '&count=' + count + '&apikey=0b2bdeda43b5688921839c8ecb20399b')
+    this.seeMore('https://api.douban.com/v2/movie/' + typeId + '?start=0&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
+    this.refreshData('https://api.douban.com/v2/movie/' + typeId + '?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
+    this.setData({
+      typeId:typeId
+    })
   },
 
   seeMore: function (url, type) {
@@ -71,12 +74,11 @@ Page({
    */
   onReachBottom: function () {
     var start = this.data.start + 11
-    var count = this.data.count + 11
+    const typeId = this.data.typeId
     this.setData({
-      start: start,
-      count: count
+      start: start
     })
-    this.refreshData('https://api.douban.com/v2/movie/top250?start=' + start + '&count=' + count + '&apikey=0b2bdeda43b5688921839c8ecb20399b')
+    this.refreshData('https://api.douban.com/v2/movie/'+typeId+'?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
   },
 
   /**
