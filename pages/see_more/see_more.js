@@ -38,6 +38,7 @@ Page({
 
   moreTitle: function (typeId) {
     if (typeId == 'top250') {
+
       wx.setNavigationBarTitle({
         title: 'Top250',
       })
@@ -68,6 +69,15 @@ Page({
     this.setData({
       hotShowList: concatHotShowList
     })
+
+    var movie = concatHotShowList
+    var len = movie.length
+    for (let i = 0; i < len; i++) {
+      if (movie[i].title.length > 6) {
+        movie[i].title = movie[i].title.substr(0, 5) + '...'
+      }
+      movie[i].star = util.getStars(movie[i].rating.stars)
+    }
   },
   /**
    * 页面上拉触底事件的处理函数

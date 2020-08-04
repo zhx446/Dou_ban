@@ -5,6 +5,13 @@
 			<image src="{{item.images.small}}"></image>
 			<text>{{item.title}}</text>
 			<text>评分：{{item.rating.average}}</text>
+			<view class="rating-star">
+				<block wx:for="{{star}}">
+					<image wx:if="{{item==2}}" src="../images/star-full.png"></image>
+					<image wx:elif="{{item==1}}" src="../images/star-half.png"></image>
+					<image wx:else src="../images/star-null.png"></image>
+				</block>
+			</view>
 		</view>
 	</block>
 </view>

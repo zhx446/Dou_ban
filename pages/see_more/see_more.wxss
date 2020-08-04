@@ -1,5 +1,5 @@
 /* pages/see_more/see_more.wxss */
-
+@import "../template/movie-template/movie-template.wxss";
 .hot-show-row {
     display: flex;
     flex-direction: row;

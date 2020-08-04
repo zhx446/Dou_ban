@@ -27,7 +27,24 @@ function httpRequest(url,callBack,type) {
   })
 }
 
+function getStars(stars) {
+  let starArr = []
+  const left = stars.substr(0,1)
+  const right = stars.substr(1,1)
+  for(let i = 0;i < left;i++) {
+    starArr.push(2)
+  }
+  if(starArr.length < 5 && right == '5') {
+    starArr.push(1)
+  }
+  // for(let i = 5;i < starArr.length;i++) {
+  //   starArr.push(0)
+  // }
+  return starArr
+}
+
 module.exports = {
   formatTime: formatTime,
-  httpRequest:httpRequest
+  httpRequest:httpRequest,
+  getStars:getStars
 }

@@ -26,7 +26,7 @@ Page({
             if(movie[i].title.length > 6) {
                 movie[i].title = movie[i].title.substr(0,5)+'...'
             }
-            // movie[i].star = [2,2,2,2,2]
+            movie[i].star = util.getStars(movie[i].rating.stars)
         }     
         
         this.setData({
@@ -44,7 +44,8 @@ Page({
         wx.navigateTo({
             url: '../movie_details/movie_details?movieId=' + e.currentTarget.dataset.movieId,
         })
-    }
+    },
+    
 
 
 })
