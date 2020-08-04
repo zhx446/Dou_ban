@@ -13,5 +13,10 @@
     margin-left: 20rpx;
     font-size: 25rpx;
     text-align: center;
-    width: 25%;
+    width: 80%;
 }
+
+/* .rating-star image{
+    width: 30rpx;
+    height: 30rpx;
+} */
