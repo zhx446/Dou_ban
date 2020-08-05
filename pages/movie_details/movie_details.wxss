@@ -74,6 +74,14 @@ page {
    margin-bottom: 40rpx;
    background-color: #fff;
    border-radius: 10rpx;
+   
+}
+.mark {
+   font-weight: bold;
+   font-size: 50rpx;
+}
+
+.score-title {
    display: flex;
    flex-direction: row;
    justify-content: space-between;

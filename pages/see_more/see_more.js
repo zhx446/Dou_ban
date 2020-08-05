@@ -83,7 +83,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var start = this.data.start + 10
+    var start = this.data.start + 11
     const typeId = this.data.typeId
     this.setData({
       start: start
