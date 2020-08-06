@@ -1,4 +1,5 @@
 <!--pages/movie_details/movie_details.wxml-->
+<import src="../template/movie-template/movie-template.wxml" />
 <view class="movie-details">
 	<view class="movie-caption">
 		<image src="{{movieDetailsImg}}"></image>
@@ -12,20 +13,15 @@
 			</view>
 		</view>
 	</view>
-	<!-- <view class="movie-score">
+	<view class="movie-score">
 		<view class="score-title">
 			<text>豆瓣评分</text>
-			<text>></text>
 		</view>
-		<text class="number">9.4</text>
-		<view class="rating-star">
-			<block wx:for="{{star}}">
-				<image wx:if="{{item==2}}" src="../images/star-full.png"></image>
-				<image wx:elif="{{item==1}}" src="../images/star-half.png"></image>
-				<image wx:else src="../images/star-null.png"></image>
-			</block>
-		</view>
-	</view> -->
+		<text>{{score}}</text>
+		<block wx:for="{{star}}">
+			<template is="movieTemplate" data="{{...item}}"></template>
+		</block>
+	</view>
 	<view class="movie-intro">
 		<text>简介</text>
 		<text>{{movieSynopsis}}</text>

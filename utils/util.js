@@ -37,7 +37,7 @@ function getStars(stars) {
   if(starArr.length < 5 && right == '5') {
     starArr.push(1)
   }
-  for(let i = starArr.length;i < 5;i++) {
+  for(let i = 5;i < starArr.length;i++) {
     starArr.push(0)
   }
   return starArr

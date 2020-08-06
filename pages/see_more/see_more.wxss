@@ -13,6 +13,5 @@
     margin-left: 20rpx;
     font-size: 25rpx;
     text-align: center;
-    width: 80%;
+    width: 25%;
 }
-

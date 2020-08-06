@@ -1,8 +1,7 @@
 <!--pages/see_more/see_more.wxml-->
-<import src="../template/movie-template/movie-template.wxml" />
 <view class="hot-show-row">
 	<block wx:for="{{hotShowList}}">
-		<!-- <view class="item-mian" bindtap="toMovieDetails" data-movie-id="{{item.id}}">
+		<view class="item-mian" bindtap="toMovieDetails" data-movie-id="{{item.id}}">
 			<image src="{{item.images.small}}"></image>
 			<text>{{item.title}}</text>
 			<text>评分：{{item.rating.average}}</text>
@@ -13,7 +12,6 @@
 					<image wx:else src="../images/star-null.png"></image>
 				</block>
 			</view>
-		</view> -->
-		<template is="movieTemplate" data="{{...item}}"></template>
+		</view>
 	</block>
 </view>
