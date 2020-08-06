@@ -12,9 +12,7 @@ Page({
                 type: '',
                 time: '',
                 movieSynopsis: '',
-                score: '',
-                star: {},
-                paragraph: true
+                paragraph:true
         },
 
         /**
@@ -23,23 +21,20 @@ Page({
         onLoad: function (options) {
                 const movieId = options.movieId
                 this.toMovieDetails('https://api.douban.com/v2/movie/subject/' + movieId + '?apikey=0b2bdeda43b5688921839c8ecb20399b')
-
+                
         },
-
+        
         toMovieDetails: function (url, type) {
                 util.httpRequest(url, this.toMovieDetailsSuccess, type)
-
+                
         },
         toMovieDetailsSuccess: function (data) {
-                var movie = data
-                movie.star = util.getStars(movie.rating.stars)
                 this.setData({
                         movieDetailsImg: data.images.small,
                         movieTitle: data.title,
                         artist: data.writers[0].name,
                         typeTime: data.genres,
                         time: data.durations,
-                        score: data.rating.average,
                         movieSynopsis: data.summary
                 })
                 // 动态设置当前页面的标题
