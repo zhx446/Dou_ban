@@ -6,14 +6,7 @@ Page({
          * 页面的初始数据
          */
         data: {
-                movieDetailsImg: '',
-                movieTitle: '',
-                artist: '',
-                type: '',
-                time: '',
-                movieSynopsis: '',
-                score: '',
-                paragraph: true
+                movie:{}
         },
 
         /**
@@ -22,6 +15,7 @@ Page({
         onLoad: function (options) {
                 const movieId = options.movieId
                 this.toMovieDetails('https://api.douban.com/v2/movie/subject/' + movieId + '?apikey=0b2bdeda43b5688921839c8ecb20399b')
+                // console.log(movieId)
 
         },
 
@@ -30,21 +24,16 @@ Page({
 
         },
         toMovieDetailsSuccess: function (data) {
+                const movie = data
+                movie.star = util.getStars(movie.rating.stars)
                 this.setData({
-                        movieDetailsImg: data.images.small,
-                        movieTitle: data.title,
-                        artist: data.writers[0].name,
-                        typeTime: data.genres,
-                        time: data.durations,
-                        score: data.rating.average,
-                        movieSynopsis: data.summary
+                        movie:movie
                 })
                 // 动态设置当前页面的标题
                 wx.setNavigationBarTitle({
-                        title: this.data.movieTitle
+                        title: movie.title
                 })
-                const movie = data
-                movie.star = util.getStars(movie.rating.stars)
+                
         },
 
         /**

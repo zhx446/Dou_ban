@@ -2,11 +2,11 @@
 <import src="../template/movie-template/movie-template.wxml" />
 <view class="movie-details">
 	<view class="movie-caption">
-		<image src="{{movieDetailsImg}}"></image>
+		<image src="{{movie.images.small}}"></image>
 		<view class="movie-right">
-			<text class="title">{{movieTitle}}</text>
-			<text class="coco">{{artist}}</text>
-			<text class="type">{{type}}{{time}}</text>
+			<text class="title">{{movie.title}}</text>
+			<text class="coco">{{movie.writers[0].name}}</text>
+			<text class="type">{{movie.genres}}{{movie.durations}}</text>
 			<view class="collect">
 				<view>想看</view>
 				<view>看过</view>
@@ -18,15 +18,15 @@
 			<text>豆瓣评分</text>
 			<text>></text>
 		</view>
-		<text class="number">{{score}}</text>
+		<text class="number">{{movie.rating.average}}</text>
 		<view class="rating-star">
-			<block wx:for="{{star}}">
+			<block wx:for="{{movie.star}}">
 				<template is="movieTemplate" data="{{...item}}"></template>
 			</block>
 		</view>
 	</view>
 	<view class="movie-intro">
 		<text>简介</text>
-		<text>{{movieSynopsis}}</text>
+		<text>{{movie.summary}}</text>
 	</view>
 </view>
