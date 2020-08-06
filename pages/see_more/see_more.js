@@ -8,7 +8,6 @@ Page({
   data: {
     hotShowList: [],
     start: 0, //初始页默认值
-    count: 10,
     typeId: ''
   },
 
@@ -38,7 +37,6 @@ Page({
 
   moreTitle: function (typeId) {
     if (typeId == 'top250') {
-
       wx.setNavigationBarTitle({
         title: 'Top250',
       })
