@@ -7,7 +7,7 @@ Page({
    */
   data: {
     hotShowList: [],
-    start: 0, //初始页默认值
+    start: 0, //初始电影默认值
     typeId: ''
   },
 
@@ -15,24 +15,51 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const typeId = options.type
-    var start = this.data.start
-    this.moreTitle(typeId)
-    this.seeMore('https://api.douban.com/v2/movie/' + typeId + '?start=0&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
-    this.refreshData('https://api.douban.com/v2/movie/' + typeId + '?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
+    //获取seeMore()传过来的参数
+    const typeId = options.type  
+    //获取start变量
+    var start = this.data.start  
+    //控制导航标题
+    this.moreTitle(typeId)  
+    this.seeMore('https://api.douban.com/v2/movie/' + typeId + '?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
     this.setData({
       typeId: typeId
     })
   },
 
+  // 接口请求数据
   seeMore: function (url, type) {
     util.httpRequest(url, this.seeMoreSuccess, type)
   },
 
+  // 处理回调函数
   seeMoreSuccess: function (data) {
-    this.setData({
-      hotShowList: data.subjects
+    //获取当前的数据数组
+    var oldHotShowList = this.data.hotShowList 
+    //从这次请求返回的数组中获取新的数组
+    var newHotShowList = data.subjects 
+    //合并数组
+    var concatHotShowList = oldHotShowList.concat(newHotShowList) 
+    //渲染到页面
+    this.setData({  
+      hotShowList: concatHotShowList
     })
+
+    // 电影标题太长处理的方法添加...省略号
+    //获取电影数据
+    var movie = concatHotShowList 
+    //电影长度
+    var len = movie.length 
+    //遍历每一步电影
+    for (let i = 0; i < len; i++) {  
+      //判断标题长度是否大于6
+      if (movie[i].title.length > 6) {  
+        //大于6的话显示5位 拼接省略号显示
+        movie[i].title = movie[i].title.substr(0, 5) + '...' 
+      }
+      // 渲染评分星星
+      movie[i].star = util.getStars(movie[i].rating.stars)
+    }
   },
 
   moreTitle: function (typeId) {
@@ -51,32 +78,12 @@ Page({
     }
   },
 
-  toMovieDetails: function (e) {
+  toMoiveDetail: function (e) {
     wx.navigateTo({
       url: '../movie_details/movie_details?movieId=' + e.currentTarget.dataset.movieId,
     })
   },
 
-  refreshData: function (url, type) {
-    util.httpRequest(url, this.dataSuccess, type)
-  },
-  dataSuccess: function (data) {
-    var oldHotShowList = this.data.hotShowList
-    var newHotShowList = data.subjects
-    var concatHotShowList = oldHotShowList.concat(newHotShowList)
-    this.setData({
-      hotShowList: concatHotShowList
-    })
-
-    var movie = concatHotShowList
-    var len = movie.length
-    for (let i = 0; i < len; i++) {
-      if (movie[i].title.length > 6) {
-        movie[i].title = movie[i].title.substr(0, 5) + '...'
-      }
-      movie[i].star = util.getStars(movie[i].rating.stars)
-    }
-  },
   /**
    * 页面上拉触底事件的处理函数
    */
@@ -86,7 +93,7 @@ Page({
     this.setData({
       start: start
     })
-    this.refreshData('https://api.douban.com/v2/movie/' + typeId + '?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
+    this.seeMore('https://api.douban.com/v2/movie/' + typeId + '?start=' + start + '&count=10&apikey=0b2bdeda43b5688921839c8ecb20399b')
   },
 
   /**

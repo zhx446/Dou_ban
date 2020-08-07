@@ -6,7 +6,8 @@ Page({
          * 页面的初始数据
          */
         data: {
-                movie:{}
+                movie:{},
+                isIntro:true
         },
 
         /**
@@ -15,8 +16,6 @@ Page({
         onLoad: function (options) {
                 const movieId = options.movieId
                 this.toMovieDetails('https://api.douban.com/v2/movie/subject/' + movieId + '?apikey=0b2bdeda43b5688921839c8ecb20399b')
-                // console.log(movieId)
-
         },
 
         toMovieDetails: function (url, type) {
@@ -34,6 +33,11 @@ Page({
                         title: movie.title
                 })
                 
+        },
+        intro:function(e) {
+                this.setData({
+                        isIntro:!this.data.isIntro
+                })
         },
 
         /**

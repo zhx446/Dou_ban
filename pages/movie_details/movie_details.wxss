@@ -98,11 +98,31 @@ page {
 }
 
 .movie-intro text:first-child {
-   padding-bottom: 20rpx;
-   font-weight: bold;
+   padding-top: 10rpx;
 }
 
 .star image {
    width: 30rpx;
    height: 30rpx;
 }
+
+.conts {
+   line-height: 50rpx;
+   /*关键属性（必须有的）  */
+   display: -webkit-box;
+ }
+ 
+ .hide {
+   /*规定子元素的排列方向 */
+   -webkit-box-orient: vertical;
+   /*限制文本显示的行数  */
+   -webkit-line-clamp: 4;
+   /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }
+
+ .isunfold {
+    color: #848484;
+    float: right;
+ }

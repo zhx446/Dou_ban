@@ -1,4 +1,13 @@
 <!--index.wxml-->
+<!-- 
+	分析需求：
+	1、点击查看更多跳转到更多页面
+	(1)导航标题跟着查看更多改变
+	2、点击电影跳转到电影详情页
+	(1)电影详情页标题跟着电影名称改变
+	3、利用接口数据把假数据替换成真数据
+ -->
+<!-- 导入模板 -->
 <import src="../template/movie-template/movie-template.wxml" />
 <view class="movie-container">
 	<view class="search-bg">

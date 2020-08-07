@@ -21,12 +21,17 @@
 		<text class="number">{{movie.rating.average}}</text>
 		<view class="rating-star">
 			<block wx:for="{{movie.star}}">
-				<template is="movieTemplate" data="{{...item}}"></template>
+				<image wx:if="{{item==2}}" src="../images/star-full.png"></image>
+				<image wx:elif="{{item==1}}" src="../images/star-half.png"></image>
+				<image wx:else src="../images/star-null.png"></image>
 			</block>
 		</view>
 	</view>
 	<view class="movie-intro">
 		<text>简介</text>
-		<text>{{movie.summary}}</text>
+		<view>
+			<text class="conts {{isIntro?'hide':''}}">{{movie.summary}}</text>
+			<text bindtap='intro' class="isunfold">{{isIntro ? '展开' : '收起'}}</text>
+		</view>
 	</view>
 </view>
